@@ -26,7 +26,7 @@
 
 | Inconsistent spacing and formatting | Style | Multiple | Flake8 reported whitespace and formatting violations. | Corrected spacing and formatting to follow PEP 8 conventions. |
 
-| Use of `random.choice()` | Security review | 70 | Bandit flagged the use of a pseudo-random generator. This is not necessarily a vulnerability for ordinary task suggestions, but it is unsuitable for security-sensitive randomness. | Kept the task suggestion feature for non-security-sensitive use; cryptographic randomness is not required for this feature. |
+| Use of `random.choice()` | Security review | 70 | Bandit flagged pseudo-random selection, which is unsuitable when security-sensitive randomness is required. | Replaced random selection with the first pending task; cryptographic randomness is not needed for this feature. | Security review | 70 | Bandit flagged the use of a pseudo-random generator. This is not necessarily a vulnerability for ordinary task suggestions, but it is unsuitable for security-sensitive randomness. | Kept the task suggestion feature for non-security-sensitive use; cryptographic randomness is not required for this feature. |
 
 
 
